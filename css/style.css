@@ -22,7 +22,7 @@
 
 header {
   height: 100vh;
-  background: linear-gradient(to top, rgba(161, 140, 209, .5) 0%, rgba(251, 194, 230, .5) 100%), url(../img/banner.jpg);
+  background: linear-gradient(to top, rgba(170, 114, 117, 0.5) 0%, rgba(150, 6, 18, 0.5) 100%), url(../img/banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
