@@ -1,0 +1,229 @@
+:root {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  --primaryColor: #dc143c;
+
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: auto;
+  padding: 60px 0;
+}
+
+header {
+  height: 100vh;
+  background: linear-gradient(to top, rgba(161, 140, 209, .5) 0%, rgba(251, 194, 230, .5) 100%), url(../img/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.head {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hamburguesa {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-navegacion {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30vw;
+  height: 100%;
+  background: rgba(255, 255, 255, .9);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: transform .3s ease-in-out;
+  transform: translate(100%);
+  z-index: 90;
+}
+
+.spread {
+  transform: translate(0);
+}
+
+.menu-navegacion a {
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 40%;
+  padding: 10px 0;
+  text-align: center;
+  transition: .3s;
+  border-radius: 5px;
+}
+
+.menu-navegacion a:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.titulo {
+  font-size: 3.75rem;
+  margin-bottom: 15px;
+}
+
+.copy {
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+.subtitulo {
+  text-align: center;
+  font-weight: 300;
+  color: var(--primaryColor);
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.servicios,
+.contacto {
+  background: #cccccc;
+}
+
+.contenedor-portafolio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contenedor-portafolio a,
+.contenedor-portafolio li {
+  width: 260px;
+  height: 150px;
+  background: var(--primaryColor);
+  color: #ffffff;
+  padding: 30px;
+  margin: 20px;
+  text-decoration: none;
+  line-height: 100px;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+
+.contenedor-portafolio a span,
+.contenedor-portafolio li span {
+  display: none;
+  line-height: 1.25rem;
+  text-align: left;
+}
+
+.contenedor-portafolio a:hover span,
+.contenedor-portafolio li:hover span {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px;
+  background: rgba(190, 190, 190, 1);
+  display: block;
+}
+
+/* FOOTER */
+footer {
+  background: #000000;
+  width: 100%;
+  min-height: 200px;
+  padding: 25px;
+  overflow: hidden;
+}
+
+footer .logo {
+  text-align: center;
+  color: #ffffff;
+  width: 100%;
+}
+
+footer .datos {
+  margin-top: 30px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .datos>div {
+  width: 33%;
+  padding: 0 15px;
+}
+
+footer .datos .horarios {
+  text-align: center;
+}
+
+footer .datos .telefono {
+  text-align: right;
+}
+
+/* MEDIAS QUERY */
+@media screen and (max-width:800px) {
+  .menu-navegacion {
+    width: 70%;
+  }
+
+  .hamburguesa {
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .titulo {
+    font-size: 3rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 25px 5px;
+  }
+
+  .contenedor-portafolio a:active span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px;
+    background: rgba(190, 190, 190, 1);
+    display: block;
+  }
+}
+
+@media screen and (max-width:500px) {}
